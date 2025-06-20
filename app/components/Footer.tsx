@@ -1,12 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#2d5016] text-white p-10 rounded-3xl text-center">
+    <footer className="bg-[#4A7C59] text-white p-10 rounded-3xl text-center">
       <div className="flex justify-center gap-8 mb-6">
         {['About Us', 'Services', 'Contact', 'Privacy', 'Terms'].map((link, index) => (
           <a
             key={index}
             href={`#${link.toLowerCase().replace(/ /g, '')}`}
-            className="text-[#d4f1a4] hover:text-white font-medium"
+            className="text-[#EEFFC5] hover:text-white font-medium"
           >
             {link}
           </a>
