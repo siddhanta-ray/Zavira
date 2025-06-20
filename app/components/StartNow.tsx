@@ -1,10 +1,10 @@
 // components/StartNow.tsx
 export default function StartNow() {
   return (
-    <section className="h-screen snap-start bg-lime-200 pt-50 px-6 flex flex-col items-center">
+    <section className="h-screen snap-start bg-lime-200 pt-24 px-6 flex flex-col items-center">
       <h2 className="text-2xl font-semibold mb-6">Start Now</h2>
       <div className="grid grid-cols-3 gap-4">
-        <div className="bg-white shadow p-4  rounded">
+        <div className="bg-white shadow p-4 rounded">
           <h4 className="font-bold mb-2">Create an Account</h4>
           <p>Sign up to get started and earn rewards.</p>
         </div>

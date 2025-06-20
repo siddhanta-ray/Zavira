@@ -1,12 +1,30 @@
-export default function HeroSection() {
+function HeroSection() {
   return (
-    <section className="h-screen snap-start bg-lime-200 pt-24 px-6 flex flex-col items-center">
-      <div className="max-w-lg">
-        <h1 className="text-3xl font-bold mb-4">Lorem ipsum dolor sit amet</h1>
-        <p className="mb-4">Consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded">Get Started</button>
+    <section className="h-screen snap-start bg-gradient-to-br from-lime-100 to-lime-200 py-10 px-6">
+      {/* Content container */}
+      <div className="max-w-6xl mx-auto mt-16 rounded-3xl bg-lime-100 p-10 shadow-md grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        {/* Left content box */}
+        <div className="bg-gradient-to-br from-lime-200 to-lime-300 p-8 rounded-xl shadow-md">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-green-900 mb-6">
+            Lorem ipsum dolor sit amet
+          </h1>
+          <p className="text-gray-800 text-lg leading-relaxed mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
+            facilisis nisi. Ut ex libero, vestibulum ut luctus at, faucibus ac
+            quam. Vivamus interdum ex eu sapien mollis, eu fringilla tellus
+            ultrices. Nam ac maximus arcu.
+          </p>
+          <button className="bg-green-900 text-white px-8 py-2 rounded-full hover:bg-green-800">
+            Action
+          </button>
+        </div>
+
+        {/* Right content box */}
+        <div className="bg-white rounded-xl shadow-md"></div>
       </div>
-      <div className="w-1/2 h-48 bg-gray-300 rounded"></div>
     </section>
   );
 }
+
+export default HeroSection;

@@ -1,10 +1,11 @@
+import Navbar from './Navbar';
 
-import Navbar from "./Navbar";
-
-export default function Header() {
+function Header() {
   return (
-    <header className="w-full px-8 py-4 flex items-center justify-between bg-white shadow-md sticky top-0 z-50">
+    <header className="fixed top-0 left-0 w-full z-50 bg-transparent py-4">
       <Navbar />
     </header>
   );
 }
+
+export default Header;
