@@ -1,31 +1,27 @@
-export default function Features() {
-    const cards = [
-        { id: 1, height: "h-68" },
-        { id: 2, height: "h-44" },
-        { id: 3, height: "h-36" },
-        { id: 4, height: "h-40" },
-        { id: 5, height: "h-64" },
-        { id: 6, height: "h-48" },
-    ];
+export default function FeaturesSection() {
+  return (
+    <section id="features" className="mb-20 px-4 sm:px-10 ">
+      <h2 className="text-3xl font-bold text-[#2d5016] mb-10">Features</h2>
 
-    return (
-        <section className="h-screen snap-start bg-gray-100 py-16 px-6" id="features">
-            <h2 className="text-3xl font-bold text-gray-700 mb-10">Features</h2>
+      <div className="grid grid-cols-7 grid-rows-9 gap-6 h-[500px] mx-auto">
+        {/* Top-left tall card */}
+        <div className="bg-[#85cb4c] rounded-xl col-span-2 row-span-5 p-6 shadow-md"></div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {cards.map((card) => (
-                    <div
-                        key={card.id}
-                        className={`bg-gray-300 rounded-md ${card.height}`}
-                    />
-                ))}
-            </div>
-        </section>
-    );
+        {/* Top row wide card */}
+        <div className="bg-[#2c3028] rounded-xl col-span-3 row-span-3 p-6 shadow-md"></div>
+
+        {/* Top-right tall card */}
+        <div className="bg-[#6fba31] rounded-xl col-span-2 row-span-4 p-6 shadow-md"></div>
+
+        {/* Bottom-left short card */}
+        <div className="bg-[#2c4219] rounded-xl col-span-3 row-span-6 p-6 shadow-md"></div>
+
+        {/* Middle tall card */}
+        <div className="bg-[#f8fdf4] rounded-xl col-span-2 row-span-5 p-6 shadow-md "></div>
+
+        {/* Bottom-right short card */}
+        <div className="bg-[#f8fdf4] rounded-xl col-span-2 row-span-4 p-4 shadow-md"></div>
+      </div>
+    </section>
+  );
 }
-
-
-
-
-
-
