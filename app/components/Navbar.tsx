@@ -1,9 +1,7 @@
 import Logo from "./Logo";
 export default function Navbar() {
  return (
-    <nav className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                    bg-gray-100 rounded-xl px-6 py-6 shadow-md flex items-center justify-between 
-                    w-[800px] max-w-full h-5">
+    <nav className="relative w-full h-[80px] px-6 sm:px-10 md:px-14 flex items-center justify-between bg-lime-200 text-white">
       {/* Left logo */}
       <Logo />
 

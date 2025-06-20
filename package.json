@@ -9,15 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@civic/auth": "^0.8.0",
     "@civic/auth-web3": "^0.6.0",
+=======
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.518.0",
+    "motion": "^12.18.1",
+>>>>>>> dc2cfa8bb03535b78bc73a077a9255232320ae9f
     "next": "15.3.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.10",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
