@@ -9,7 +9,7 @@ const cardData = [
   {
     title: 'Become a contractor',
     text: 'Complete our comprehensive sustainability assessment to identify opportunities and create your personalized action plan.',
-    href: '/assessment'
+    href: '/contractor'
   },
   {
     title: 'Become a Dao Member',
