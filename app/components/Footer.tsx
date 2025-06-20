@@ -1,13 +1,18 @@
-
 export default function Footer() {
   return (
-    <footer className="w-full p-6 bg-black text-white text-center">
-      <p className="text-sm">Lorem Ipsum | Terms & Conditions | Privacy Policy</p>
-      <div className="mt-2 flex justify-center space-x-2">
-        <div className="w-4 h-4 bg-white rounded-full"></div>
-        <div className="w-4 h-4 bg-white rounded-full"></div>
-        <div className="w-4 h-4 bg-white rounded-full"></div>
+    <footer className="bg-[#2d5016] text-white p-10 rounded-3xl text-center">
+      <div className="flex justify-center gap-8 mb-6">
+        {['About Us', 'Services', 'Contact', 'Privacy', 'Terms'].map((link, index) => (
+          <a
+            key={index}
+            href={`#${link.toLowerCase().replace(/ /g, '')}`}
+            className="text-[#d4f1a4] hover:text-white font-medium"
+          >
+            {link}
+          </a>
+        ))}
       </div>
+      <p className="text-sm">&copy; 2025 EcoChain. Building sustainable futures through innovative waste management.</p>
     </footer>
   );
 }

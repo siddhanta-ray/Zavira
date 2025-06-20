@@ -1,23 +1,20 @@
-import Logo from "./Logo";
+import { UserButton } from "@civic/auth/react";
 export default function Navbar() {
- return (
-    <nav className="relative w-full h-[80px] px-6 sm:px-10 md:px-14 flex items-center justify-between bg-lime-200 text-white">
-      {/* Left logo */}
-      <Logo />
-
-      {/* Center nav links */}
-      <ul className="flex space-x-4 text-gray-700 font-medium text-lg">
-        <li><a href="#home" className="hover:underline">home</a></li>
-        <li><a href="#about" className="hover:underline">home</a></li>
-        <li><a href="#services" className="hover:underline">home</a></li>
-        <li><a href="#contact" className="hover:underline">home</a></li>
+  return (
+    <nav className="fixed top-0 left-1/2 transform -translate-x-1/2 w-full max-w-[1000px] bg-white rounded-3xl px-6 py-4 mt-4 shadow-md flex justify-between items-center z-50">
+      <div className="text-2xl font-extrabold text-[#2d5016]">Zavira Chain</div>
+      <ul className="hidden md:flex gap-8 text-[#4a7c59] font-medium">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-
-      {/* Right placeholder */}
-      <div className="w-12 h-8 bg-gray-300 rounded-md"></div>
+      <a
+        href="#get-started"
+        className="bg-[#7fb069] text-white px-5 py-2 rounded-xl font-semibold hover:bg-[#4a7c59] transition"
+      >
+        <UserButton />
+      </a>
     </nav>
   );
 }
-
-
-

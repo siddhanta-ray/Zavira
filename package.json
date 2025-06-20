@@ -10,6 +10,13 @@
   },
   "dependencies": {
     "@civic/auth": "^0.8.0",
+<<<<<<< HEAD
+=======
+    "@civic/auth-web3": "^0.6.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.518.0",
+    "motion": "^12.18.1",
+>>>>>>> 45354e1a329fbbbb338fe645fce96c55ffc55bde
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
