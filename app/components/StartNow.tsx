@@ -15,7 +15,7 @@ const cardData = [
   {
     title: 'Become a Dao Member',
     text: 'Join our community of environmental champions and access exclusive resources, Vote ,earn ,tools, and expert support.',
-    href: 'https://discord.gg/abATn73pED',
+    href: 'https://discord.gg/4cTQZquY',
     icon: '/icons/Zavira dao.svg'
   }
 ];
