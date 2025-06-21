@@ -1,6 +1,6 @@
 export default function FeaturesSection() {
   return (
-    <section id="features" className="mb-20 px-4 sm:px-10 ">
+    <section id="features" className="mb-20 ">
       <h2 className="text-3xl font-bold text-[#2d5016] mb-10">Features</h2>
 
       <div className="grid grid-cols-7 grid-rows-9 gap-6 h-[500px] mx-auto">

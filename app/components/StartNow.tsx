@@ -1,5 +1,4 @@
 import StartCard from './StartCard';
-
 const cardData = [
   {
     title: 'Upload a picture',
