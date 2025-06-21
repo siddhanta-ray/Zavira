@@ -18,7 +18,7 @@ export default function FileUploader() {
     }
   };
 
-  const isImageRelevant = async(imageInBase) => {
+  const isImageRelevant = async(imageInBase: string) => {
     console.log("============-----00", imageInBase)
     try {
   

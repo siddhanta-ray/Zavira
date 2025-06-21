@@ -267,12 +267,6 @@ export default function ImageUploadForm() {
       <div className="max-w-4xl mx-auto">
         <Card className="bg-green-100/80 backdrop-blur-sm border-green-200 shadow-xl">
           <CardContent className="p-8">
-            {/* Header */}
-            <div className="mb-8">
-              <h1 className="text-2xl font-bold text-green-800 mb-1">Welcome XYZ</h1>
-              <p className="text-green-600 font-medium">PIN: 700034</p>
-            </div>
-
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Input Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
