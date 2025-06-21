@@ -9,7 +9,7 @@ export default function AvailableContracts() {
       id: 1,
       location: 'City Centre, Newtown, Kolkata, West Bengal',
       stake: 50,
-      image: '/icons/sustainability.png'
+      image: '/icons/sustainability.jpg'
     },
     {
       id: 2,
