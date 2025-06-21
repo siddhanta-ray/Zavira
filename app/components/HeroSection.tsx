@@ -18,32 +18,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="overflow-hidden">
-  {/* Before Image */}
-  <div className="relative rounded-3xl">
-    <img
-      src="/icons/image1.png"
-      alt="Before Cleanup"
-      className="w-full h-[200px] object-cover"
-    />
-    <span className="absolute top-2 left-3 bg-[#2d5016] text-white font-mono text-sm font-bold px-3 py-1 rounded-md shadow">
-      Before
-    </span>
-  </div>
-
-  {/* After Image */}
-  <div className="relative rounded-3xl">
-    <img
-      src="/icons/image2.png"
-      alt="After Cleanup"
-      className="w-full h-[200px] object-cover"
-    />
-    <span className="absolute top-2 left-3 bg-[#2d5016] text-white font-mono text-sm font-bold px-3 py-1 rounded-md shadow">
-      After
-    </span>
-  </div>
-</div>
-
+      <div className="overflow-hidden col-span-1">
+      </div>
     </section>
   );
 }

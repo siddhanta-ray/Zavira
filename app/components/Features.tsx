@@ -4,31 +4,37 @@ export default function FeaturesSection() {
       title: 'Location-Based Matching',
       description:
         'Smart geo-location system connects contractors with nearby issues, optimizing response times and efficiency.',
+      emoji: '🗺️',
     },
     {
       title: 'AI-Powered Verification',
       description:
         'Google Gemini validates image authenticity and categorizes issues automatically.',
+      emoji: '🤖',
     },
     {
       title: 'Blockchain Transparency',
       description:
         'All transactions, stakes, and rewards are recorded on-chain, ensuring complete transparency and trust.',
+      emoji: '🔒',
     },
     {
       title: 'Stake-to-Commit System',
       description:
         'Contractors stake tokens to ensure accountability, getting rewards upon successful completion and verification.',
+      emoji: '💰',
     },
     {
       title: 'DAO Governance',
       description:
         'Community-driven validation and platform governance through decentralized autonomous organization.',
+      emoji: '🔒',
     },
     {
       title: 'Impact Analytics',
       description:
         'Track community improvements, contractor performance, and overall platform impact with detailed analytics.',
+      emoji: '📊',
     },
   ];
 
@@ -41,8 +47,10 @@ export default function FeaturesSection() {
             key={index}
             className="bg-[#F8FDF4] rounded-2xl shadow-md p-6 text-center flex flex-col items-center"
           >
-            {/* Icon Placeholder */}
-            <div className="w-12 h-12 bg-[#EEFFC5] rounded-md mb-4"></div>
+            {/* Emoji Icon */}
+            <span className="w-12 h-12 bg-[#EEFFC5] rounded-md mb-4 flex items-center justify-center text-2xl">
+              {feature.emoji}
+            </span>
 
             {/* Title */}
             <h3 className="font-mono text-xl font-bold text-[#2D5016] mb-2">

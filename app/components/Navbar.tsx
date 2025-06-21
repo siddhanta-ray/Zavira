@@ -8,9 +8,9 @@ export default function Navbar() {
       <div className=""><Logo /></div>
       <ul className="hidden md:flex gap-8 text-[#6A994E] font-mono">
         <li><Link href="/">Home</Link></li>
-        <li><Link href="#">About</Link></li>
-        <li><Link  href="#">Services</Link></li>
-        <li><Link href="#">Join Now</Link></li>
+        <li><Link href="#about">About Chain</Link></li>
+        <li><Link  href="#features">Features</Link></li>
+        <li><Link href="#operte">How it works</Link></li>
       </ul>
         <UserButton />
     </nav>

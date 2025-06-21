@@ -23,7 +23,7 @@ export default function HowWeOperate() {
   ];
 
   return (
-    <section className=" p-12 rounded-3xl shadow-2xs mb-10">
+    <section id="operate" className=" p-12 rounded-3xl shadow-2xs mb-10">
       <h2 className="font-mono text-4xl font-bold text-[#2D5016] mb-12">How We Operate</h2>
       <div className="flex flex-col gap-8 relative">
         {steps.map((step, index) => (
