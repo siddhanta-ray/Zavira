@@ -13,8 +13,39 @@ export default function FileUploader() {
       const base64 = await convertToBase64(selectedFile);
       setBase64Data(base64);
       console.log("Base64 Image Data:", base64); // prints to terminal/console
+      const result = isImageRelevant(base64)
+      console.log("========0", result)
     }
   };
+
+  const isImageRelevant = async(imageInBase) => {
+    console.log("============-----00", imageInBase)
+    try {
+  
+  
+          const response = await fetch("https://zavira.onrender.com/ai", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ image: imageInBase }), // Send Base64 string
+          });
+  
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+  
+          let data = await response.json();
+  
+          // Clean up JSON response if necessary
+          const cleanedText = JSON.parse(data.replace(/```json|```/g, "").trim());
+  
+          console.log(cleanedText);
+          return (cleanedText);
+        } catch (error) {
+          console.error("Error analyzing image:", error);
+        }
+  }
 
   // Convert file to base64
   const convertToBase64 = (file: File): Promise<string> => {
