@@ -1,26 +1,60 @@
 export default function FeaturesSection() {
+  const features = [
+    {
+      title: 'Location-Based Matching',
+      description:
+        'Smart geo-location system connects contractors with nearby issues, optimizing response times and efficiency.',
+    },
+    {
+      title: 'AI-Powered Verification',
+      description:
+        'Google Gemini validates image authenticity and categorizes issues automatically.',
+    },
+    {
+      title: 'Blockchain Transparency',
+      description:
+        'All transactions, stakes, and rewards are recorded on-chain, ensuring complete transparency and trust.',
+    },
+    {
+      title: 'Stake-to-Commit System',
+      description:
+        'Contractors stake tokens to ensure accountability, getting rewards upon successful completion and verification.',
+    },
+    {
+      title: 'DAO Governance',
+      description:
+        'Community-driven validation and platform governance through decentralized autonomous organization.',
+    },
+    {
+      title: 'Impact Analytics',
+      description:
+        'Track community improvements, contractor performance, and overall platform impact with detailed analytics.',
+    },
+  ];
+
   return (
-    <section id="features" className="mb-20 ">
-      <h2 className="text-3xl font-bold text-[#2d5016] mb-10">Features</h2>
+    <section id="features" className="mb-20">
+      <h2 className="font-mono text-4xl font-bold text-[#2D5016] mb-10">Features</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className="bg-[#F8FDF4] rounded-2xl shadow-md p-6 text-center flex flex-col items-center"
+          >
+            {/* Icon Placeholder */}
+            <div className="w-12 h-12 bg-[#EEFFC5] rounded-md mb-4"></div>
 
-      <div className="grid grid-cols-7 grid-rows-9 gap-6 h-[500px] mx-auto">
-        {/* Top-left tall card */}
-        <div className="bg-[#85cb4c] rounded-xl col-span-2 row-span-5 p-6 shadow-md"></div>
+            {/* Title */}
+            <h3 className="font-mono text-xl font-bold text-[#2D5016] mb-2">
+              {feature.title}
+            </h3>
 
-        {/* Top row wide card */}
-        <div className="bg-[#2c3028] rounded-xl col-span-3 row-span-3 p-6 shadow-md"></div>
-
-        {/* Top-right tall card */}
-        <div className="bg-[#6fba31] rounded-xl col-span-2 row-span-4 p-6 shadow-md"></div>
-
-        {/* Bottom-left short card */}
-        <div className="bg-[#2c4219] rounded-xl col-span-3 row-span-6 p-6 shadow-md"></div>
-
-        {/* Middle tall card */}
-        <div className="bg-[#f8fdf4] rounded-xl col-span-2 row-span-5 p-6 shadow-md "></div>
-
-        {/* Bottom-right short card */}
-        <div className="bg-[#f8fdf4] rounded-xl col-span-2 row-span-4 p-4 shadow-md"></div>
+            {/* Description */}
+            <p className="font-mono text-md text-[#2D5016]">
+              {feature.description}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -1,25 +1,46 @@
 export default function HowWeOperate() {
   const steps = [
-    'Assessment & Planning',
-    'Smart Collection System',
-    'Advanced Processing',
-    'Resource Recovery',
-    'Impact Monitoring'
+    {
+      title: 'Issue Reporting & AI Verification',
+      description:
+        'Citizens upload issue photos. AI analyzes authenticity and posts verified problems.',
+    },
+    {
+      title: 'Contractor Discovery & Commitment',
+      description:
+        'Contractors find nearby tasks and stake tokens to ensure accountability.',
+    },
+    {
+      title: 'Work Completion & Documentation',
+      description:
+        'Contractors fix issues and upload before/after photos as completion proof.',
+    },
+    {
+      title: 'DAO Validation & Reward Distribution',
+      description:
+        'DAO validates completed work and distributes crypto rewards to contractors.',
+    },
   ];
 
   return (
-    <section className="bg-white p-12 rounded-3xl shadow-md mb-10">
-      <h2 className="text-3xl font-bold text-[#2d5016] mb-6">How We Operate</h2>
-      <div className="flex flex-col gap-6">
-        {steps.map((title, index) => (
+    <section className=" p-12 rounded-3xl shadow-2xs mb-10">
+      <h2 className="font-mono text-4xl font-bold text-[#2D5016] mb-12">How We Operate</h2>
+      <div className="flex flex-col gap-8 relative">
+        {steps.map((step, index) => (
           <div
             key={index}
-            className="flex items-center gap-6 bg-[#f8fdf4] hover:bg-[#d4f1a4] rounded-xl px-6 py-4 transition-transform hover:translate-x-2"
+            className="relative flex items-center gap-6 bg-gradient-to-r from-[#EEFFC5] to-[#DDF9B2] rounded-full px-8 py-6 shadow-md"
           >
-            <div className="w-12 h-12 bg-[#7fb069] text-white rounded-full flex items-center justify-center font-bold text-lg">
+            {/* Number circle */}
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#A5D86E] to-[#7FB069] text-[#2D5016] font-mono text-3xl font-bold shadow-inner">
               {index + 1}
             </div>
-            <div className="text-lg font-semibold text-[#2d5016]">{title}</div>
+
+            {/* Text content */}
+            <div className="text-left">
+              <h3 className="font-mono text-xl font-bold text-[#2D5016]">{step.title}</h3>
+              <p className="font-mono text-md text-[#2D5016]">{step.description}</p>
+            </div>
           </div>
         ))}
       </div>
