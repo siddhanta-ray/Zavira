@@ -10,8 +10,8 @@ export default function StartCard({ title, text, href, icon }: { title: string; 
         <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#d4f1a4] text-3xl mx-auto mb-6">
           <Image src={icon} alt="icon" width={24} height={20} />
         </div>
-        <h3 className="text-xl font-bold text-[#2d5016] mb-2">{title}</h3>
-        <p className="text-sm text-[#4a7c59]">{text}</p>
+        <h3 className="text-xl font-bold text-[#2d5016] mb-2 font-mono ">{title}</h3>
+        <p className="text-sm text-[#4a7c59] font-mono">{text}</p>
       </div>
     </Link>
   );

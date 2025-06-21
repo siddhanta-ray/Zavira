@@ -23,7 +23,7 @@ const cardData = [
 export default function StartNow() {
   return (
     <section className="mb-10">
-      <h2 className="text-3xl font-bold text-[#2d5016] mb-6">Start Your Journey</h2>
+      <h2 className="text-3xl font-bold text-[#2d5016] mb-6 font-mono">Start Your Journey</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {cardData.map((card, index) => (
           <StartCard

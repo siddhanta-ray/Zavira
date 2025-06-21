@@ -1,13 +1,9 @@
-import React from 'react'
+import Image from "next/image";
 
-function Logo() {
-   return (
-    <div className="w-12 h-8 bg-gray-300 rounded-md flex items-center justify-center font-bold text-sm text-gray-600">
-      LOGO
+export default function Logo() {
+  return (
+    <div className="flex items-center gap-2  ">
+      <Image src="/icons/Zavira_logo.svg" alt="Logo" width={32} height={50} />
     </div>
   );
 }
-
-export default Logo;
-
-
