@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import GetStartedButton from "./GetStartedButton";
 
 export default function HeroSection() {
@@ -18,7 +19,15 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="overflow-hidden col-span-1">
+      {/* Right side: image */}
+      <div className="overflow-hidden col-span-1 flex justify-center items-center">
+        <Image
+          src="/icons/hero.png"
+          alt="Hero Visual"
+          width={528}
+          height={512}
+          className="rounded-3xl shadow-md"
+        />
       </div>
     </section>
   );
