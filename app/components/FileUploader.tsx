@@ -30,17 +30,23 @@ export default function FileUploader() {
   return (
     <div className="mb-6">
       <label className="block mb-2 font-medium">Upload:</label>
-      <input
-        type="file"
-        onChange={handleFileChange}
-        className="mb-4 block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-gray-700 hover:file:bg-gray-200"
-      />
-      <button
-        onClick={handleSubmit}
-        className="bg-white px-4 py-1 rounded shadow hover:bg-gray-200"
-      >
-        Submit
-      </button>
+      <div className="relative border-2 border-dashed border-gray-500 rounded h-40 flex justify-center items-center mb-4 bg-white/20">
+        <input
+          type="file"
+          onChange={handleFileChange}
+          className="absolute inset-0 opacity-0 cursor-pointer"
+        />
+        <div className="text-gray-600 pointer-events-none">Drag & drop file here or click to browse</div>
+      </div>
+      <div className="flex justify-end">
+        <button
+          type="button"
+          onClick={handleSubmit}
+          className="bg-white px-4 py-1 rounded shadow hover:bg-gray-200"
+        >
+          Submit
+        </button>
+      </div>
     </div>
   );
 }
