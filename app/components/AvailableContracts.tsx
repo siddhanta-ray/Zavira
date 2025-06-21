@@ -9,13 +9,13 @@ export default function AvailableContracts() {
       id: 1,
       location: 'City Centre, Newtown, Kolkata, West Bengal',
       stake: 50,
-      image: './public/icons/Chingrighata.png'
+      image: '/icons/sustainability.png'
     },
     {
       id: 2,
       location: 'Chingrighata, Kolkata, West Bengal',
       stake: 70,
-      image: '/api/placeholder/400/200'
+      image: '/icons/xyz.jpg'
     }
   ];
 return (
