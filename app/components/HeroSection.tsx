@@ -14,7 +14,6 @@ export default function HeroSection() {
           <GetStartedButton/>
         </div>
       </div>
-      <div className="bg-white rounded-3xl p-2 shadow-md w-full max-w-md">
   <div className="overflow-hidden rounded-xl">
     {/* Before Image */}
     <div className="relative">
@@ -40,8 +39,6 @@ export default function HeroSection() {
       </span>
     </div>
         </div>
-      </div>
-      
     </section>
   );
 }
