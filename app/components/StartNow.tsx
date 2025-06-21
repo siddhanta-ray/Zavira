@@ -14,7 +14,7 @@ const cardData = [
   {
     title: 'Become a Dao Member',
     text: 'Join our community of environmental champions and access exclusive resources, Vote ,earn ,tools, and expert support.',
-    href: '/membership'
+    href: 'https://discord.gg/4cTQZquY'
   }
 ];
 
