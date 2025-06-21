@@ -1,24 +1,6 @@
-'use client';
-import { useState } from 'react';
-import ContractCarousel from '@/app/components/ContractCarousel';
-import ContractModal from '@/app/components/ContractModal';
-
-export default function Contactor() {
-  const [showModal, setShowModal] = useState(false);
-  const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
-
-  const nearbyContracts = new Array(6).fill(0);
+export default function Contractor() {
+  const nearbyContracts = new Array(4).fill(0);
   const historyContracts = new Array(5).fill(0);
-
-  const handleCardClick = (index: number) => {
-    setSelectedCardIndex(index);
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-    setSelectedCardIndex(null);
-  };
 
   return (
     <div className="min-h-screen bg-[#f1f9d0] p-6 rounded-2xl">
@@ -33,21 +15,25 @@ export default function Contactor() {
         </div>
       </div>
 
-      {/* Carousels */}
-      <ContractCarousel
-        title="Contracts near you:"
-        cards={nearbyContracts}
-        onCardClick={handleCardClick}
-        type="nearby"
-      />
-      <ContractCarousel
-        title="Contract history:"
-        cards={historyContracts}
-        type="history"
-      />
+      {/* Contracts near you */}
+      <div className="mb-8">
+        <h2 className="text-md font-semibold text-[#2d5016] mb-3">Contracts near you:</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {nearbyContracts.map((_, i) => (
+            <div key={i} className="h-32 bg-green-300 rounded-lg shadow cursor-pointer hover:scale-105 transition" />
+          ))}
+        </div>
+      </div>
 
-      {/* Modal */}
-      <ContractModal show={showModal} onClose={closeModal} index={selectedCardIndex} />
+      {/* Contract history */}
+      <div>
+        <h2 className="text-md font-semibold text-[#2d5016] mb-3">Contract history:</h2>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          {historyContracts.map((_, i) => (
+            <div key={i} className="h-28 bg-green-200 rounded-lg shadow-sm cursor-pointer hover:scale-105 transition" />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
