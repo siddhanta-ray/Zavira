@@ -20,7 +20,7 @@ export default function Contractor() {
         <h2 className="text-md font-semibold text-[#2d5016] mb-3">Contracts near you:</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {nearbyContracts.map((_, i) => (
-            <div key={i} className="h-32 bg-green-300 rounded-lg shadow cursor-pointer hover:scale-105 transition" />
+            <div key={i} className="h-32 bg-green-400 rounded-lg shadow cursor-pointer hover:scale-105 transition" />
           ))}
         </div>
       </div>

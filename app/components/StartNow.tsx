@@ -1,10 +1,9 @@
 import StartCard from './StartCard';
-
 const cardData = [
   {
     title: 'Upload a picture',
     text: 'Share your waste management needs and let our AI-powered system analyze the best solutions for your specific requirements.',
-    href: '/upload'
+    href: '/uploadSection'
   },
   {
     title: 'Become a contractor',
