@@ -1,15 +1,18 @@
-interface ContractCardProps {
-  onClick?: () => void;
-  color?: 'nearby' | 'history';
-}
-
-export default function ContractCard({ onClick, color = 'nearby' }: ContractCardProps) {
+export default function ContractCard({ image, location, action, actionLabel }: {
+  image: string;
+  location: string;
+  action?: React.ReactNode;
+  actionLabel?: string;
+}) {
   return (
-    <div
-      onClick={onClick}
-      className={`h-32 md:h-28 rounded-lg shadow cursor-pointer hover:scale-105 transition-all ${
-        color === 'nearby' ? 'bg-green-400' : 'bg-green-200'
-      }`}
-    />
+    <div className="bg-[#f5fdf0] rounded-xl p-3 shadow-md">
+      <img src={image} alt={location} className="rounded-md mb-2 w-full h-40 object-cover" />
+      <p className="font-mono text-sm text-[#2d5016] mb-2">{location}</p>
+      {action && (
+        <div className="bg-[#2d5016] text-white font-mono text-sm px-3 py-1 rounded-full text-center">
+          {actionLabel || action}
+        </div>
+      )}
+    </div>
   );
 }

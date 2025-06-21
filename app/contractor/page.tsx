@@ -1,39 +1,62 @@
-export default function Contractor() {
-  const nearbyContracts = new Array(4).fill(0);
-  const historyContracts = new Array(5).fill(0);
+import ContractCard from '@/app/components/ContractCard';
+import { ContractSummaryCard } from '@/app/components/ContractSummaryCard';
+import { ContractSearchBox } from '@/app/components/ContractSearchBox';
+import { ContractHistoryCard } from '@/app/components/ContractHistoryCard';
+import DashboardHeader from '@/app/components/DasboardHeader';
 
+export default function ContractorDashboard() {
   return (
-    <div className="min-h-screen bg-[#f1f9d0] p-6 rounded-2xl">
-      {/* Header */}
-      <div className="flex justify-between items-start mb-6">
-        <div>
-          {/* <h1 className="text-xl font-bold text-[#2d5016]">Welcome XYZ</h1> */}
-          {/* <p className="text-sm italic text-gray-700">Newtown, Kolkata 700034</p> */}
+    <main className="p-6 bg-gradient-to-br from-[#f5ffe4] to-[#dcf2c3] min-h-screen font-mono">
+      <DashboardHeader name="Contractor" location="Newtown, Kolkata 700034" />
+
+      <div className="grid grid-cols-3 gap-4 mb-6">
+        <ContractSummaryCard label="Contracts Completed" value="23" />
+        <ContractSummaryCard label="Active Contracts" value="03" />
+        <ContractSummaryCard label="Rating" value="4.9" />
+      </div>
+
+      <div className="grid grid-cols-3 gap-4 mb-6">
+        <div className="col-span-2">
+          <h3 className="text-xl font-bold text-[#2d5016] mb-2">Available Contracts Near You</h3>
+          <ContractSearchBox />
+          <div className="grid grid-cols-2 gap-4 mt-4">
+            <ContractCard
+              image="/contractu.jpg"
+              location="City Centre, Newtown, Kolkata, West Bengal"
+              actionLabel="Take Contract (Stake: 50 ZVR)"
+            />
+            <ContractCard
+              image="/contractu.jpg"
+              location="Chingrighata, Kolkata, West Bengal"
+              actionLabel="Take Contract (Stake: 70 ZVR)"
+            />
+          </div>
         </div>
-        <div className="bg-white border border-gray-400 px-4 py-1 rounded-full text-sm shadow">
-          Current token: <strong>90</strong>
+
+        <div className="bg-white rounded-xl shadow-md p-4">
+          <div className="text-[#2d5016] font-bold mb-2">💰 1,100 ZVR | 0x7A9...3B2</div>
+          <h3 className="text-lg font-bold text-[#2d5016] mb-4">📄 Active Contracts</h3>
+          <ContractCard
+            image="/contractu.jpg"
+            location="City Centre, Newtown, Kolkata, West Bengal"
+            actionLabel="30 ZVR Staked"
+          />
+          <ContractCard
+            image="/light.jpg"
+            location="Newtown, Action Area II, Kolkata, West Bengal"
+            actionLabel="20 ZVR Staked"
+          />
         </div>
       </div>
 
-      {/* Contracts near you */}
-      <div className="mb-8">
-        <h2 className="text-md font-semibold text-[#2d5016] mb-3">Contracts near you:</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {nearbyContracts.map((_, i) => (
-            <div key={i} className="h-32 bg-green-400 rounded-lg shadow cursor-pointer hover:scale-105 transition" />
-          ))}
+      <div className="bg-[#2d5016]/10 p-4 rounded-xl">
+        <h3 className="text-lg font-bold text-[#2d5016] mb-4">📄 Contracts History</h3>
+        <div className="grid grid-cols-3 gap-4">
+          <ContractHistoryCard image="/public/icons/Chingrighata.png" reward="70" location="City Centre, Newtown, Kolkata, West Bengal" />
+          <ContractHistoryCard image="/contractu.jpg" reward="40" location="City Centre, Newtown, Kolkata, West Bengal" />
+          <ContractHistoryCard image="/contractu.jpg" reward="80" location="City Centre, Newtown, Kolkata, West Bengal" />
         </div>
       </div>
-
-      {/* Contract history */}
-      <div>
-        <h2 className="text-md font-semibold text-[#2d5016] mb-3">Contract history:</h2>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {historyContracts.map((_, i) => (
-            <div key={i} className="h-28 bg-green-200 rounded-lg shadow-sm cursor-pointer hover:scale-105 transition" />
-          ))}
-        </div>
-      </div>
-    </div>
+    </main>
   );
 }
