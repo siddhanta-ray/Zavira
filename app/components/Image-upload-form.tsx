@@ -6,7 +6,7 @@ import { useState, useRef, useCallback } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { useToast } from "@/hooks/use-toast"
+import { useToast } from "@/app/hooks/use-toast"
 import { Upload, Calendar, X, Check, Loader2 } from "lucide-react"
 import Image from "next/image"
 
@@ -72,7 +72,10 @@ export default function ImageUploadForm() {
         throw new Error("Failed to check image relevance")
       }
 
-      const responseText = await response.text()
+      const responseText = await (response.json())
+      const a = responseText.replaceAll("```", "")
+      const b = a.replaceAll("json", "")
+      console.log("Response from /ai:", JSON.parse(b))
       // Parse the response that comes in the format: \`\`\`json\n{\n  "relevant": false\n}\n\`\`\`
       const jsonMatch = responseText.match(/```json\n([\s\S]*?)\n```/)
       if (jsonMatch) {
@@ -108,8 +111,9 @@ export default function ImageUploadForm() {
 
     try {
       const base64 = await convertToBase64(file)
+      console.log("Base64 image data:", base64)
       const preview = URL.createObjectURL(file)
-
+      // window.alert(base64)
       setSelectedFile(file)
       setImagePreview(preview)
       setFormData((prev) => ({ ...prev, image: base64 }))
@@ -217,9 +221,17 @@ export default function ImageUploadForm() {
 
     try {
       setIsSubmitting(true)
-
-      // Mock API call
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      console.log("Submitting -----================-----:", formData)
+      // Real API call to /ai endpoint
+      const response = await fetch("https://zavira.onrender.com/ai", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ image: formData.image }),
+      })
+      const data = await response.json()
+      console.log("/ai API response:", data)
 
       toast({
         title: "Form submitted successfully!",
@@ -237,6 +249,7 @@ export default function ImageUploadForm() {
       })
       removeImage()
     } catch (error) {
+      console.error("Submission failed:", error)
       toast({
         title: "Submission failed",
         description: "There was an error submitting your form. Please try again.",

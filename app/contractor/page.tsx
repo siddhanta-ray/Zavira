@@ -7,8 +7,8 @@ export default function Contractor() {
       {/* Header */}
       <div className="flex justify-between items-start mb-6">
         <div>
-          <h1 className="text-xl font-bold text-[#2d5016]">Welcome XYZ</h1>
-          <p className="text-sm italic text-gray-700">Newtown, Kolkata 700034</p>
+          {/* <h1 className="text-xl font-bold text-[#2d5016]">Welcome XYZ</h1> */}
+          {/* <p className="text-sm italic text-gray-700">Newtown, Kolkata 700034</p> */}
         </div>
         <div className="bg-white border border-gray-400 px-4 py-1 rounded-full text-sm shadow">
           Current token: <strong>90</strong>
