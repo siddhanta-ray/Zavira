@@ -19,9 +19,9 @@ export default function AvailableContracts() {
     }
   ];
 return (
-    <div className="bg-white rounded-lg p-6 shadow-sm">
+    <div className="bg-[#F8FDF4] rounded-lg p-6 shadow-sm">
       <div className="flex justify-between items-center mb-6">
-        <h3 className="text-xl font-bold text-gray-800">
+        <h3 className="text-xl font-bold font-mono text-gray-800">
           Available Contracts Near You
         </h3>
         <div className="flex items-center space-x-2">
@@ -38,7 +38,7 @@ return (
           onChange={(e) => setSearchTerm(e.target.value)}
           className="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500"
         />
-        <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-r-lg transition-colors">
+        <button className="bg-[#2D5016] hover:bg-green-600 text-white px-6 py-2 rounded-r-lg transition-colors font-mono">
           Search
         </button>
       </div>
@@ -46,7 +46,7 @@ return (
       <div className="space-y-4">
         {contracts.map((contract) => (
           <div key={contract.id} className="border rounded-lg overflow-hidden">
-            <div className="relative h-48 bg-gray-200">
+            <div className="relative h-48 bg-[#EEFFC5]">
               <img
                 src={contract.image}
                 alt="Contract location"
@@ -55,7 +55,7 @@ return (
             </div>
             <div className="p-4">
               <p className="text-gray-700 mb-3">{contract.location}</p>
-              <button className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg transition-colors">
+              <button className="w-full bg-[#2D5016] hover:bg-green-600 font-mono text-white py-2 rounded-lg transition-colors">
                 Take Contract (Stake: {contract.stake} ZVR)
               </button>
             </div>

@@ -4,26 +4,26 @@ export default function ActiveContracts() {
       id: 1,
       location: 'City Centre, Newtown, Kolkata, West Bengal',
       status: 'In Progress',
-      image: '/api/placeholder/300/150'
+      image: '/icons/lampost.jpg'
     },
     {
       id: 2,
       location: 'Newtown, Action Area II, Kolkata West Bengal',
       status: 'In Progress',
-      image: '/api/placeholder/300/150'
+      image: '/icons/pthole.jpg'
     }
   ];
 
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm">
-      <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
+    <div className="bg-[#F8FDF4] rounded-lg p-6 shadow-sm">
+      <h3 className="text-xl font-bold text-[#2D5016] mb-6 flex items-center font-mono">
         📋 Active Contracts
       </h3>
 
       <div className="space-y-4">
         {activeContracts.map((contract) => (
           <div key={contract.id} className="border rounded-lg overflow-hidden">
-            <div className="relative h-32 bg-gray-200">
+            <div className="relative h-32 bg-[#EEFFC5]">
               <img
                 src={contract.image}
                 alt="Active contract"
