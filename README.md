@@ -2,14 +2,10 @@
 
 <div align="center">
 
-![Zavira Logo](https://via.placeholder.com/200x80/8FBC8F/FFFFFF?text=ZAVIRA)
+
 
 **Empowering citizens to report community issues and connecting them with contractors through blockchain technology**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Blockchain](https://img.shields.io/badge/Blockchain-Enabled-blue.svg)](https://blockchain.org)
-[![AI Verification](https://img.shields.io/badge/AI-Powered-green.svg)](https://ai.google.dev/gemini-api)
-[![Community](https://img.shields.io/badge/Community-Driven-orange.svg)](https://github.com/zavira-platform/zavira)
 
 [🚀 Live Demo](https://zavira.community) • [📖 Documentation](https://docs.zavira.community) • [💬 Discord](https://discord.gg/zavira) • [🐦 Twitter](https://twitter.com/zaviraplatform)
 
@@ -70,22 +66,18 @@ Zavira gamifies community improvement by creating economic incentives for both p
 ## 🛠️ Technology Stack
 
 ### Frontend
-- **React.js** - Modern, responsive user interface
+- **Next.js** - Modern, responsive user interface
 - **Tailwind CSS** - Utility-first styling framework
-- **Web3.js** - Blockchain interaction layer
-- **PWA Support** - Mobile-first progressive web app
+- **Figma** - Prototyping and wireframe
 
 ### Backend
 - **Node.js** - Scalable server-side runtime
 - **Express.js** - Web application framework
-- **MongoDB** - Document database for user data
 - **IPFS** - Decentralized file storage for images
 
 ### Blockchain
-- **Ethereum/Polygon** - Smart contract platform
+- **Ethereum** - 
 - **Solidity** - Smart contract programming language
-- **MetaMask Integration** - Wallet connectivity
-- **OpenZeppelin** - Security-audited contract libraries
 
 ### AI & Verification
 - **Google Gemini API** - Image analysis and verification
