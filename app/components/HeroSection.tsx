@@ -3,7 +3,7 @@ import GetStartedButton from "./GetStartedButton";
 
 export default function HeroSection() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-8 h-auto mt-12 mb-10 pt-6">
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-8 h-auto mt-5 mb-10 pt-6">
       {/* Left side: text content */}
       <div className="col-span-2 bg-gradient-to-br from-[#EEFFC5] to-[#BBD9A2] rounded-3xl p-12 shadow-md relative overflow-hidden">
         <div className="absolute -top-1/2 -right-1/2 w-[200%] h-[200%] bg-[radial-gradient(circle,var(--tw-gradient-stops))] from-[#a7c957]/30 to-transparent z-0" />
@@ -25,7 +25,7 @@ export default function HeroSection() {
           src="/icons/hero.png"
           alt="Hero Visual"
           width={528}
-          height={512}
+          height={500}
           className="rounded-3xl shadow-md"
         />
       </div>
