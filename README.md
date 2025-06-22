@@ -1,14 +1,7 @@
 # 🌍 Zavira: Building Better Communities Together
 
 <div align="center">
-
-
-
 **Empowering citizens to report community issues and connecting them with contractors through blockchain technology**
-
-
-[🚀 Live Demo](https://zavira.community) • [📖 Documentation](https://docs.zavira.community) • [💬 Discord](https://discord.gg/zavira) • [🐦 Twitter](https://twitter.com/zaviraplatform)
-
 </div>
 
 ---
@@ -27,11 +20,21 @@
 
 ## 🔥 Why Zavira Matters
 
-### The Problem
-Every day, millions walk past broken streetlights, overflowing trash, cracked roads, and deteriorating infrastructure. Traditional civic reporting is slow, unrewarding, and often ignored.
+### The Problem It Solves
+Despite daily encounters with broken streetlights, open manholes, and garbage piles, most people don’t report civic issues — because traditional systems are slow, centralized, and unrewarding. There’s no real incentive to care, no trust that action will be taken, and no transparency once a problem is flagged.
+
+On the other side, contractors have limited visibility into micro civic tasks, face delayed payments, and have no way to build decentralized reputation for their work.
+
+While blockchain platforms offer transparency, high gas fees and generic infrastructure make them unsuitable for frequent, small-scale local interactions — such as photo uploads, task validations, or micro-payments.
 
 ### Our Solution
-Zavira gamifies community improvement by creating economic incentives for both problem reporting and solution delivery, powered by Web3 technology.
+Here comes Zavira — not just a civic reporting tool, but a decentralized coordination platform, powered by its own Layer 2 app chain.
+
+Zavira transforms passive observers into active community builders. We've created an ecosystem where:
+
+🧍‍♂️ Reporting problems becomes rewarding
+🔧 Fixing issues becomes profitable
+🏙️ Communities become self-sustaining
 
 ### The Impact
 - **Faster response times** to community issues
@@ -76,7 +79,7 @@ Zavira gamifies community improvement by creating economic incentives for both p
 - **IPFS** - Decentralized file storage for images
 
 ### Blockchain
-- **Ethereum** - 
+- **Ethereum** - Smart contract platform
 - **Solidity** - Smart contract programming language
 
 ### AI & Verification
